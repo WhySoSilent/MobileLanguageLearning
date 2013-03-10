@@ -1,0 +1,206 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<!-- Version: Mobile 0.1.0 DEV -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title>移动语言学习</title>
+	<link rel="stylesheet" href="css/mobile/jquery.mobile-1.2.0.css" />
+	<link rel="stylesheet" href="css/mobile/my.css" /><!-- 该文件好像可有可无！！！！ -->
+	<link rel='stylesheet' media="screen" type="text/css" href="css/mobile/viewTwo.css" />
+	
+	<script type="text/javascript" src="js/core.js"></script>
+	<script src="js/jquery-1.7.2.js"></script>
+	<script src="js/mobile/jquery.mobile-1.2.0.js"></script>
+	<script type="text/javascript" src="js/mobile/setAjax_mobile.js"></script>
+	<script src="js/mobile/my.js"></script>
+	
+	<script type="text/javascript" src="js/mobile/functionExecutionLib_mobile.js"></script><!-- 具体的几个主要功能执行函数封装到了该文件内的一个对象中 -->
+	<script type="text/javascript" src="js/mobile/parameter_mobile.js"></script><!-- 该文件里设置 全局参数 和 全局状态 方便测试 -->
+	
+
+  <!-- User-generated css -->
+  <style>
+    
+  </style>
+
+  <!-- User-generated js -->
+  <script>
+
+  try {
+
+    $(function() {
+        
+    });
+
+  } catch (error) {
+    console.error("Your javascript has an error: " + error);
+  }
+
+  </script>
+</head>
+<body>
+  <!-- viewOne -->
+	<div id="firstView" data-role="page" data-theme="b">
+		<div data-role="header" data-theme="b">
+			<h2>Mr Q!</h2>
+		</div>
+		<div data-role="content">
+			  <div class="ui-grid-a">
+				  <div class="ui-block-b">
+						  <fieldset data-role="controlgroup">
+							  <label for="toggleswitch"></label>
+							  <select id="toggleswitch" name="toggleswitch" data-role="slider" data-theme="d" data-track-theme="d"data-mini="true">
+								  <option value="off">截止</option>
+								  <option value="on">收集</option>
+							  </select>
+						  </fieldset>
+				  </div>
+			  </div>
+			  <form method="POST" action="">
+				  <div data-role="fieldcontain">
+					  <fieldset data-role="controlgroup" data-mini="true">
+						  <label for="textinput1">Question!</label>
+						  <input id="queInput" value="" type="text" placeholder="">
+					  </fieldset>
+				  </div>
+				  <div data-role="fieldcontain">
+					  <fieldset data-role="controlgroup" data-mini="true">
+						  <label for="textinput2">Answer</label>
+						  <input id="ansInput" value="" type="text" placeholder="">
+					  </fieldset>
+				  </div>
+				  <input value="打分" id="mark" type="button" data-iconpos="left" data-icon="check" data-inline="true" data-mini="true">
+			  </form>
+			  <div><p id="testArea">collect close</p></div>
+			  <div><p id="testArea2">----</p></div>
+			  <div><p id="testArea3">----</p></div>
+		</div>
+		<div data-role="tabbar" data-theme="d" data-iconpos="left">
+			<ul>
+				<li><a href="#firstView" data-theme="" data-icon="star" data-transition="fade">Mr Q!</a></li>
+				<li><a href="#secondView" data-theme="" data-icon="check" data-transition="pop">Answers</a></li>
+				<li><a href="#thridView" data-theme="" data-icon="grid" data-transition="fade">Teacher</a></li>
+			</ul>
+		</div>
+	</div>
+  <!-- viewTwo -->
+	<div id="secondView" data-role="page">
+		<div data-role="header" data-theme="b">
+			<h3>Guys Answer</h3>
+		</div>
+		<div data-role="content">
+			<div id="mrQ"><h3 id="question">Mr Q: this is my answer this is my answer</h3><h3 id="limitTime">00:00</h3><div class="clearFloat"></div></div>
+			<div id="guysAnswer">
+				<div class="aAns">
+					
+					<p class="stuClass">软件1班</p>
+					<p class="stuName">张某某</p>
+					<p class="stuAnswer">this is my answer 爱国</p>
+						
+					<div class="clearFloat"></div>
+				</div>
+				<div class="aAns">
+					
+					<p class="stuClass">软件1班</p>
+					<p class="stuName">张某某</p>
+					<p class="stuAnswer">this is my answer 爱国</p>
+						
+					<div class="clearFloat"></div>
+				</div>
+				<div class="aAns">
+					
+					<p class="stuClass">软件1班</p>
+					<p class="stuName">张某某</p>
+					<p class="stuAnswer">this is my answer 爱国</p>
+						
+					<div class="clearFloat"></div>
+				</div>
+				<div class="aAns">
+					
+					<p class="stuClass">通信1班</p>
+					<p class="stuName">王某某</p>
+					<p class="stuAnswer">this is my answer this is my answer this is my answer this is my answer this is my answer</p>
+					
+					<div class="clearFloat"></div>
+				</div>
+			</div>
+		</div>
+		<div data-role="tabbar" data-theme="d" data-iconpos="left">
+			<ul>
+				<li><a href="#firstView" data-theme="" data-icon="star" data-transition="fade">Mr Q!</a></li>
+				<li><a href="#secondView" data-theme="" data-icon="check" data-transition="pop">Answers</a></li>
+				<li><a href="#thridView" data-theme="" data-icon="grid" data-transition="fade">Teacher</a></li>
+			</ul>
+		</div>
+	</div>
+  <!-- viewThree -->
+	<div id="thridView" data-role="page">
+		<div data-role="header" data-theme="c">
+			<h2>Judge</h2>
+		</div>
+		<div data-role="content">
+			<div data-role="collapsible-set" data-theme="a">
+              <div data-role="collapsible" data-collapsed="false">
+                  <h3>所有学生</h3>
+                  <ul data-role="listview" data-inset="true" data-divider-theme="b">
+                      <li data-theme="c"><a href="#" data-transition="slide">Button</a></li>
+                      <li data-theme="c"><a href="#" data-transition="slide">Button</a></li>
+                      <li data-theme="c"><a href="#" data-transition="slide">Button</a></li>
+                  </ul>
+              </div>
+              <div data-role="collapsible" data-collapsed="false">
+                  <h3>软件</h3>
+                  <ul data-role="listview" data-inset="true" data-divider-theme="b">
+                      <li role="heading" data-role="list-divider">Divider</li>
+                      <li data-theme="c"><a href="#" data-transition="slide">Button</a></li>
+                  </ul>
+              </div>
+              <div data-role="collapsible" data-collapsed="false">
+                  <h3>外语09</h3>
+              </div>
+              <div data-role="collapsible" data-collapsed="false">
+                  <h3>影视11</h3>
+                  <div class="ui-grid-a">
+                      <div class="ui-block-a">
+                          <div data-role="fieldcontain">
+                              <fieldset data-role="controlgroup">
+                                  <label for="toggleswitch6"></label>
+                                  <select id="toggleswitch6" name="toggleswitch6" data-role="slider" data-theme="d" data-mini="true">
+                                      <option value="off">上课</option>
+                                      <option value="on">下课</option>
+                                  </select>
+                              </fieldset>
+                          </div>
+                      </div>
+                      <div class="ui-block-b">
+                          <div data-role="fieldcontain">
+                              <fieldset data-role="controlgroup">
+                                  <label for="toggleswitch8"></label>
+                                  <select id="toggleswitch8" name="toggleswitch8" data-role="slider" data-theme="d" data-mini="true">
+                                      <option value="off">点名</option>
+                                      <option value="on">不点名</option>
+                                  </select>
+                              </fieldset>
+                          </div>
+                      </div>
+                  </div>
+                  <ul data-role="listview" data-inset="true" data-divider-theme="b">
+                      <li data-theme="c"><a href="#" data-transition="slide">第一组</a></li>
+                      <li data-theme="c"><a href="#" data-transition="slide">第二组</a></li>
+                  </ul>
+              </div>
+          </div>
+		</div>
+		<div data-role="tabbar" data-theme="d" data-iconpos="left">
+			<ul>
+				<li><a href="#firstView" data-theme="" data-icon="star" data-transition="fade">Mr Q!</a></li>
+				<li><a href="#secondView" data-theme="" data-icon="check" data-transition="pop">Answers</a></li>
+				<li><a href="#thridView" data-theme="" data-icon="grid" data-transition="fade">Teacher</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

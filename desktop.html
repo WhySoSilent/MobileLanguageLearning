@@ -1,0 +1,98 @@
+﻿<html> 
+  <head>
+	<!-- Version: Desktop 0.1.0 DEV -->
+	<meta charset="utf-8" />
+    <title>移动语言学习</title> 
+    <link rel='stylesheet' media="screen" type='text/css' href='css/desktop/screen.css' />
+	
+	<script type="text/javascript" src="js/core.js"></script>
+	<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+	<script type="text/javascript" src="js/desktop/setAjax_desktop.js"></script>
+	<script type="text/javascript" src="js/desktop/robot_animation.js"></script>
+	
+	<script type="text/javascript" src="js/desktop/functionExecutionLib_desktop.js"></script><!-- 具体的几个主要功能执行函数封装到了该文件内的一个对象中 -->
+	<script type="text/javascript" src="js/desktop/parameter_desktop.js"></script><!-- 该文件里设置 全局参数 和 全局状态 方便测试 -->
+  </head> 
+  <body>
+	
+	<div id="header">
+		<img id="weixinLogo" src="images/desktop/weixin_logo.png" />
+		<h1 id="logoText">移动语言学习</h1>
+	</div>
+	
+	<div id="aside">
+		<h3>Channels</h3>
+		<ul>
+			<li class="li_mrq active">Mr Q!</li>
+			<li class="li_mrq">Groups</li>
+			<li class="li_mrq">Sign in</li>
+			<li id="switchWritePad" class="li_mrq">WritePad</li>
+		</ul>
+		
+	</div>
+
+	<div id="content">
+		<div id="aQuestion">
+			<div class="mrQ"><div id="RobotMrQ"></div><h2 id="question">answer this is my answer this is my answer th</h2><h2 id="limitTime">00:00</h2><div class="clearFloat"></div></div>
+			<div id="guysAnswer">
+				<div class="aAns ansBingo">
+					<img class="avatar" src="images/desktop/default_boy.jpg" />
+					<p class="stuAnswer">this is my answer this is my answer this is my answer this is my answer this is my answer</p>
+					<p class="stuClass">电子1班</p>
+					<p class="stuName">李某某</p>
+					<div class="clearFloat"></div>
+				</div>
+				<div class="aAns displayOutstanding ansBingo">
+					<img class="avatar" src="images/desktop/default_boy.jpg" />
+					<p class="stuAnswer">this is my answer</p>
+					<p class="stuClass">软件1班</p>
+					<p class="stuName">张某某</p>
+					<div class="clearFloat"></div>
+				</div>
+				<div class="aAns">
+					<img class="avatar" src="images/desktop/default_girl.jpg" />
+					<p class="stuAnswer">this is my answer</p>
+					<p class="stuClass">通信1班</p>
+					<p class="stuName">王某某</p>
+					<div class="clearFloat"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="oldQuestion">
+			<div class="mrQ"><h2 class="question">Question:</h2><h2 class="limitTime">00:00</h2><div class="clearFloat"></div></div>
+			<div class="guysAnswer">
+				<div class="aAns">
+					<img class="avatar" src="images/desktop/default_boy.jpg" />
+					<p class="stuAnswer">this is my answer</p>
+					<p class="stuClass">电子1班</p>
+					<p class="stuName">李某某</p>
+						<div class="clearFloat"></div>
+				</div>
+				<div class="aAns ansBingo">
+					<img class="avatar" src="images/desktop/default_girl.jpg" />
+					<p class="stuAnswer">this is my answer</p>
+					<p class="stuClass">软件1班</p>
+					<p class="stuName">张某某</p>	
+					<div class="clearFloat"></div>
+				</div>
+				<div class="aAns ansBingo">
+					<img class="avatar" src="images/desktop/default_boy.jpg" />
+					<p class="stuAnswer">this is my answer</p>
+					<p class="stuClass">通信1班</p>
+					<p class="stuName">王某某</p>
+					<div class="clearFloat"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+	
+	<div id="footer">
+		<div id="writePadBox">
+			<textarea id="writePad" type="textarea"></textarea>
+		</div>
+	</div>
+  </body> 
+</html>

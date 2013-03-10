@@ -1,0 +1,47 @@
+#mrQ {
+	border-bottom: 2px solid #bbb;
+}
+#question {
+	float: left;
+	width: 80%;
+}
+#limitTime {
+	float: right;
+	width: 15%;
+}
+#guysAnswer {
+	clear: both;
+	
+}
+
+#guysAnswer .aAns {
+	min-height: 40px;
+	border-bottom: 2px dashed #bbb;
+	padding: 10px 10px 10px 20px;
+	margin: 5px 0 0 0;
+	background-color: #EAEACA;
+}
+
+p.stuClass, p.stuName ,p.stuAnswer {
+	margin: 0px;
+	font-size: 14px;	
+}
+p.stuClass {
+	float: left;
+	
+}
+p.stuName {
+	float: left;
+	margin-left: 25px; 
+}
+p.stuAnswer {
+	clear: left;
+	margin-top: 20px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+
+.clearFloat {
+	clear: both;
+}
